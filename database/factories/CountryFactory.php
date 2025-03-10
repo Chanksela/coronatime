@@ -17,8 +17,8 @@ class CountryFactory extends Factory
 	public function definition()
 	{
 		return [
-			'name'           => ['ka'=>fake()->name(), 'en'=>fake()->name()],
-			'country_code'   => fake()->title(),
+			'name'           => ['ka'=>fake()->country(), 'en'=>fake()->country()],
+			'country_code'   => fake()->countryCode(),
 			'confirmed'      => fake()->randomNumber(),
 			'recovered'      => fake()->randomNumber(),
 			'deaths'         => fake()->randomNumber(),
