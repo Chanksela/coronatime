@@ -16,7 +16,7 @@ class DatabaseSeeder extends Seeder
 	 */
 	public function run()
 	{
-		Country::factory(150)->create();
+		// Country::factory(150)->create();
 		// \App\Models\User::factory(10)->create();
 
 		// \App\Models\User::factory()->create([
@@ -25,5 +25,9 @@ class DatabaseSeeder extends Seeder
 		// 	'is_verified'=> 0,
 		// 	'password'   => bcrypt('password'),
 		// ]);
+
+		$this->call([
+			CountrySeeder::class,
+		]);
 	}
 }
